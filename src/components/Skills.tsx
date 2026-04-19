@@ -24,15 +24,19 @@ export function Skills() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-3 mb-8">
-              <CheckCircle2 className="text-primary dark:text-accent" size={28} />
-              <h3 className="text-2xl font-serif font-bold italic">Business domains & Skills</h3>
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-4">
+                <CheckCircle2 className="text-[#967B2C] dark:text-accent" size={20} />
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#967B2C] dark:text-accent">
+                  Business domains & Skills
+                </h3>
+              </div>
             </div>
-            <div className="grid sm:grid-cols-2 gap-4">
+            <div className="flex flex-wrap gap-3">
               {siteConfig.skills.core.map((skill, index) => (
-                <div key={index} className="glass p-4 rounded-xl border border-gray-100 dark:border-gray-900 flex items-center gap-3">
+                <div key={index} className="glass px-4 py-2 rounded-full border border-gray-200 dark:border-gray-800 flex items-center gap-2 hover:border-accent transition-colors">
                   <div className="w-1.5 h-1.5 rounded-full bg-accent" />
-                  <span className="text-sm font-medium">{skill}</span>
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{skill}</span>
                 </div>
               ))}
             </div>
@@ -44,18 +48,20 @@ export function Skills() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <div className="flex items-center gap-3 mb-8">
-              <Wrench className="text-primary dark:text-accent" size={28} />
-              <h3 className="text-2xl font-serif font-bold italic">Software Proficiency</h3>
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Wrench className="text-[#967B2C] dark:text-accent" size={20} />
+                <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-[#967B2C] dark:text-accent">
+                  Software Proficiency
+                </h3>
+              </div>
             </div>
             <div className="flex flex-wrap gap-3">
               {siteConfig.skills.tools.map((tool, index) => (
-                <span 
-                  key={index} 
-                  className="px-4 py-2 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded-full text-xs font-bold uppercase tracking-wider hover:border-accent transition-colors"
-                >
-                  {tool}
-                </span>
+                <div key={index} className="glass px-4 py-2 rounded-full border border-gray-200 dark:border-gray-800 flex items-center gap-2 hover:border-accent transition-colors">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary/10 dark:bg-accent/10" />
+                  <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{tool}</span>
+                </div>
               ))}
             </div>
           </motion.div>

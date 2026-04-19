@@ -19,14 +19,17 @@ export function ProfileHero() {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-accent font-medium tracking-[0.2em] uppercase text-sm mb-4">
+              <h2 className="text-[#967B2C] dark:text-accent font-semibold tracking-[0.2em] uppercase text-sm mb-4">
                 Business Analyst
               </h2>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight mb-8">
                 {siteConfig.name}
               </h1>
-              <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 font-light leading-relaxed mb-10 max-w-2xl text-balance">
-                {siteConfig.overview}
+              <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 font-normal leading-[1.8] mb-10 max-w-3xl text-balance">
+                {siteConfig.overview.split(/(ECBA|SAFe® 6|11\+ years|financial services|business analysis|UniSuper|AI enablement|Digital Financial Advice \(DFA\)|CRM transition|Genesys Cloud uplift)/g).map((part, i) =>
+                  ['ECBA', 'SAFe® 6', '11+ years', 'financial services', 'business analysis', 'UniSuper', 'AI enablement', 'Digital Financial Advice (DFA)', 'CRM transition', 'Genesys Cloud uplift'].includes(part) ?
+                    <strong key={i} className="font-semibold text-primary dark:text-white">{part}</strong> : part
+                )}
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -71,7 +74,7 @@ export function ProfileHero() {
               transition={{ delay: 0.5 }}
               className="absolute -bottom-6 -left-6 glass p-6 rounded-xl shadow-lg border-l-4 border-accent"
             >
-              <p className="text-xs uppercase tracking-tighter text-gray-500 mb-1">Experience</p>
+              <p className="text-xs uppercase tracking-tighter text-gray-700 dark:text-gray-400 mb-1">Experience</p>
               <p className="text-2xl font-bold font-serif">11+ Years</p>
             </motion.div>
 
@@ -81,7 +84,7 @@ export function ProfileHero() {
               transition={{ delay: 0.6 }}
               className="absolute top-12 -right-6 glass p-6 rounded-xl shadow-lg border-r-4 border-primary"
             >
-              <p className="text-xs uppercase tracking-tighter text-gray-500 mb-1">Certification</p>
+              <p className="text-xs uppercase tracking-tighter text-gray-700 dark:text-gray-400 mb-1">Certification</p>
               <p className="text-lg font-bold font-serif">ECBA • SAFe 6</p>
             </motion.div>
           </div>

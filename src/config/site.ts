@@ -2,8 +2,8 @@ export const siteConfig = {
   name: "Purva Jain",
   title: "Purva Jain | Business Analyst & Financial Assessment Consultant",
   description: "Business Analyst & Financial Assessment Consultant with 11+ years of experience in financial services, specializing in business analysis, member engagement, advisory, and process improvement.",
-  url: "https://misspurvajain.github.io",
-  baseUrl: "https://misspurvajain.github.io",
+  url: "https://mspurva.github.io",
+  baseUrl: "https://mspurva.github.io",
   ogImage: {
     url: "/og-image.png",
     width: 1200,
