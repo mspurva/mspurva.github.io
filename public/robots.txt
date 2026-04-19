@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mspurva.github.io/sitemap.xml
